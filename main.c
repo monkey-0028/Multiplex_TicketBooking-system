@@ -9,21 +9,30 @@
 enum colorTemplet{
     rred,bblue,ggreen,yyellow,
 };
+enum HALL{
+    h1,h2,h3,h4
+};
 
 #include "incl/declaration.h"
 
 
 
 
-
-
 int main() {
+    clear;
+    printf("Press Enter to Start ");
     hideCursor();
     getchar();
     welcomeTheme();
+    getchar();
+    enum HALL userInput=SelectHallFunction(); //add number of seats available
+    
+    getchar();
 
     return 0;
 }
+
+
 
 
 
@@ -36,6 +45,7 @@ int main() {
 #include "incl/moveTo.h"
 #include "Effects/Blink.h"
 #include "incl/welcomeTheme.h"
+#include "Effects/SelectHall.h"
 
 
 
