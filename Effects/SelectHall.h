@@ -1,4 +1,4 @@
-enum HALL SelectHallFunction(){
+enum HALL SelectHallFunction(struct hall_seat *one,struct hall_seat *two, struct hall_seat *three, struct hall_seat *four){
     clear;
     
 
@@ -166,7 +166,20 @@ enum HALL SelectHallFunction(){
             }
 
         }
-        
+    struct hall_seat *head;
+    switch(selectHall){
+        case 1:
+        head = one;break;
+        case 2:
+        head = two;break;
+        case 3:
+        head = three;break;
+        case 4:
+        head = four;break;
+    }
+
+    moveTo(1,(x/2)-45-space);
+    green("Available Seats : ");printf("%d",head->seat_left);
     PlaySound("audio/click.wav", NULL, SND_FILENAME | SND_ASYNC);
     userInput=getch();
     clear;
